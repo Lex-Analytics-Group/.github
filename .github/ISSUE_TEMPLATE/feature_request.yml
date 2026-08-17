@@ -1,0 +1,57 @@
+name: Feature request
+description: Suggest an idea or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: product
+    attributes:
+      label: Product or service
+      placeholder: e.g. CaseAI, Bankrotlik.uz, Malaka Sertifikati
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the situation you're in and why the current behaviour falls short.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who benefits from this?
+      multiple: true
+      options:
+        - Lawyers and legal professionals
+        - Banking and finance clients
+        - Internal team
+        - General public
+        - Other
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and discussions and this is not a duplicate
+          required: true
