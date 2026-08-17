@@ -1,0 +1,82 @@
+name: Bug report
+description: Something isn't working as expected
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Do not use this form for security vulnerabilities** —
+        follow [SECURITY.md](https://github.com/Lex-Analytics-Group/.github/blob/main/SECURITY.md)
+        instead.
+
+  - type: input
+    id: product
+    attributes:
+      label: Product or service
+      placeholder: e.g. CaseAI, Bankrotlik.uz, Malaka Sertifikati
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How badly does this affect you?
+      options:
+        - Blocking — I cannot use the product
+        - Major — there is a painful workaround
+        - Minor — cosmetic or low impact
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser and version, OS, device, and app or commit version if known.
+      placeholder: |
+        Browser: Chrome 128
+        OS: Windows 11
+        Version/commit:
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, console output or screenshots
+      description: Paste any relevant output. **Remove tokens, passwords and personal data first.**
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate
+          required: true
+        - label: This is not a security vulnerability
+          required: true
+        - label: I have removed any credentials or personal data from the details above
+          required: true
